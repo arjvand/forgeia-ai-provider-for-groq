@@ -1,0 +1,15 @@
+/vendor/
+AGENTS.md
+mimocode.jsonc
+opencode.jsonc
+skills-lock.json
+/.agents/
+/.mimocode/
+/.opencode/
+/openspec/
+.phpunit.result.cache
+.phpcs-cache
+/.phpstan-cache/
+.DS_Store
+Thumbs.db
+/tmp/

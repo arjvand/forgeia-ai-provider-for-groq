@@ -1,0 +1,65 @@
+{
+    "name": "forgeia/forgeia-ai-provider-for-groq",
+    "description": "Forgeia AI Provider for Groq for the PHP AI Client SDK. Works as both a Composer package and a WordPress plugin.",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "ai",
+        "groq",
+        "lpu",
+        "wordpress",
+        "llm"
+    ],
+    "authors": [
+        {
+            "name": "Alireza Arjvand",
+            "homepage": "https://github.com/arjvand"
+        }
+    ],
+    "homepage": "https://github.com/arjvand/forgeia-ai-provider-for-groq",
+    "support": {
+        "issues": "https://github.com/arjvand/forgeia-ai-provider-for-groq/issues",
+        "source": "https://github.com/arjvand/forgeia-ai-provider-for-groq"
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpstan/phpstan": "~2.1",
+        "slevomat/coding-standard": "^8.20",
+        "squizlabs/php_codesniffer": "^3.7",
+        "wordpress/php-ai-client": "^0.4 || dev-trunk",
+        "wp-coding-standards/wpcs": "^3.0"
+    },
+    "suggest": {
+        "wordpress/php-ai-client": "Required. The core PHP AI Client SDK that this provider extends."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Forgeia\\GroqAiProvider\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "lint": [
+            "@phpcs",
+            "@phpstan"
+        ],
+        "phpcbf": "phpcbf",
+        "phpcs": "phpcs",
+        "phpstan": "phpstan analyze --memory-limit=256M"
+    }
+}
