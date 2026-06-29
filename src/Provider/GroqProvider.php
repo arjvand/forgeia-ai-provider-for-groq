@@ -73,7 +73,7 @@ class GroqProvider extends AbstractApiProvider {
 		if ( version_compare( AiClient::VERSION, '1.2.0', '>=' ) ) {
 			// For WordPress, we should translate the description.
 			if ( function_exists( '__' ) ) {
-                // phpcs:ignore Generic.Files.LineLength.TooLong
+				// phpcs:ignore Generic.Files.LineLength.TooLong
 				$providerMetadataArgs[] = __( 'Text generation with Groq LPU inference models.', 'forgeia-ai-provider-for-groq' );
 			} else {
 				$providerMetadataArgs[] = 'Text generation with Groq LPU inference models.';

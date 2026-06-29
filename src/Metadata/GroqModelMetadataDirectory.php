@@ -126,10 +126,12 @@ class GroqModelMetadataDirectory extends AbstractOpenAiCompatibleModelMetadataDi
 							);
 						}
 
-						// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-						error_log(
-							'Unrecognized Groq model ID, skipping: ' . $modelId
-						);
+						if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+							// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+							error_log(
+								'Unrecognized Groq model ID, skipping: ' . $modelId
+							);
+						}
 						return null;
 					},
 					$modelsData
